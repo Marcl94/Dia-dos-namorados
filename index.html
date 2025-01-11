@@ -6,67 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz dia dos namorados</title>
     <link rel="icon" href="img_coração.png">
+    <style>
+        body {
+            background-color: mediumvioletred;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .painel {
+            background-color: rgb(255, 255, 255);
+            width: 90%;
+            max-width: 500px;
+            border-radius: 30px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .painel img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #sim, #nao {
+            height: 40px;
+            width: 80px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        #nao {
+            position: absolute;
+        }
+    </style>
 </head>
 
-
-<style>
-    body {
-        background-color: mediumvioletred;
-    }
-
-    .painel {
-        margin: auto;
-        background-color: rgb(255, 255, 255);
-        width: 500px;
-        height: 500px;
-        border-radius: 30px;
-        text-align: center;
-        padding-top: 50px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-
-    #sim {
-        height: 40px;
-        width: 60px;
-        background-color: red;
-        border: 2px solid white;
-        border-radius: 10px;
-        color: white;
-        margin-left: -70px;
-
-    }
-
-    #nao {
-        position: absolute;
-        height: 40px;
-        width: 60px;
-        background-color: red;
-        border: 2px solid white;
-        border-radius: 10px;
-        color: white;
-        margin-left: 10px;
-    }
-</style>
-
 <body>
-    <br><br><br><br><br><br>
     <div class="painel">
         <h1>Feliz dia dos namorados!</h1>
-
         <img src="https://i.pinimg.com/originals/bd/4e/c7/bd4ec739a39da8ecac1921feb27d40fa.gif" alt="gato">
-
         <h3>Aceita namorar cmg?</h3>
-
         <a href="https://youtu.be/b4oqJ5_0XtQ?si=Cee6F56mmfSkQQFO"><button id="sim"> Sim! </button></a>
         <button onmouseover="fuja()" id="nao"> Não! </button>
-
-
-
     </div>
 
     <script>
         function fuja() {
-            var botaoNao = document.getElementById("nao")
+            var botaoNao = document.getElementById("nao");
 
             var larguraJanela = window.innerWidth;
             var alturaJanela = window.innerHeight;
@@ -81,7 +77,6 @@
             botaoNao.style.top = aleatorioY + "px";
         }
     </script>
-
 </body>
 
 </html>
